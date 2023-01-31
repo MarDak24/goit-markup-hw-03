@@ -19,6 +19,15 @@ body {
   font-size: 16px;
 }
 
+header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
   color: currentColor;
@@ -75,10 +84,9 @@ ul {
   padding-top: 0;
 }
 
-.page-header {
+.container.page-header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-link {
@@ -171,10 +179,7 @@ ul {
 
 .button-studio {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   padding: 16px 32px;
-  gap: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -214,7 +219,23 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 72px;
+}
+
+.filter-list .item:not(:last-child) {
+  margin-right: 24px;
+}
+
 .filter-button {
+  padding: 12px 24px;
   background-color: var(--button-portfolio-background);
 
   cursor: pointer;
@@ -229,6 +250,27 @@ ul {
 .filter-button:focus {
   color: var(--white-color);
   background-color: var(--hover-button-portfolio-background);
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -24px;
+  margin-top: -48px;
+}
+
+.card-list .item {
+  flex-basis: calc(100% / 3 - 24px);
+  margin-left: 24px;
+  margin-top: 48px;
+}
+
+.card-list .card-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
 }
 
 .link {
@@ -257,13 +299,13 @@ ul {
   display: flex;
 }
 
-.specifics-list .list {
+.specifics-list .item {
   width: 264px;
 }
 
-.specifics-list .list:not(:last-child),
-.employment-list .list:not(:last-child),
-.team-list .list:not(:last-child) {
+.specifics-list .item:not(:last-child),
+.employment-list .item:not(:last-child),
+.team-list .item:not(:last-child) {
   margin-right: 24px;
 }
 
@@ -311,17 +353,17 @@ ul {
   display: flex;
 }
 
-.section.team .list {
+.section.team .item {
   background-color: var(--white-color);
 }
 
-.card-content {
+.team-list .card-content {
   display: flex;
   flex-direction: column;
   padding: 32px 16px;
 }
 
-.card-content .name {
+.team-list .card-content .name {
   color: var(--main-color);
 
   font-weight: 500;
@@ -331,7 +373,7 @@ ul {
   text-align: center;
 }
 
-.card-content .position {
+.team-list .card-content .position {
   color: var(--secondary-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
