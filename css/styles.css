@@ -163,6 +163,22 @@ p {
   padding-bottom: 188px;
 }
 
+.bg-image {
+  height: 600px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/people-office.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .hero-title {
   width: 496px;
   margin-left: auto;
@@ -191,6 +207,7 @@ p {
 
 .button-studio {
   padding: 16px 32px;
+  border-radius: 4px;
 }
 
 .button-studio:hover,
@@ -283,6 +300,9 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
+  border-right: 1px solid var(--footer-text-color);
+  border-left: 1px solid var(--footer-text-color);
+  border-bottom: 1px solid var(--footer-text-color);
 }
 
 .link {
@@ -311,8 +331,9 @@ p {
   display: flex;
 }
 
-.specifics-list .item {
-  width: 100%;
+.specifics-list .item,
+.team-list .item {
+  width: calc((100% - 3 * 24px) / 4);
 }
 
 .specifics-list .item:not(:last-child),
@@ -359,6 +380,10 @@ p {
 .employment-list {
   display: flex;
   justify-content: space-around;
+}
+
+.employment-list .item {
+  width: calc((100% - 2 * 24px) / 3);
 }
 
 .team {
